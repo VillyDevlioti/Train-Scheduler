@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    padding: 5% 15%;
+    text-align: center;
+}
+
+.card-header {
+    background-color:blue;
+    color: white;
+    font-weight: 700;
+}
+
+.train-schedule {
+    margin-bottom: 1.5rem;
+}

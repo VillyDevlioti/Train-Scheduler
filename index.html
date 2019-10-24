@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+
+   <!-- Specific Firebase products we want -->
+   <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+   <!--Bootstrap-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--Style CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+ 
+</head>
+
+<body>
+    <div class="container">
+        <!--Jumbotron-->
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="jumbotron">
+                    <h1 class="display-4">Any time is train time!</h1>
+                    <p class="lead">Choo choo! Chee chee!</p>
+                </div>
+            </div>
+        </div>
+        <!--Card which holds a table with timetable-->
+        <div class="row justify-content-center"> 
+            <div class="col-md-10">
+                <div class="card border-primary train-schedule">
+                    <div class="card-header">Current Train Schedule</div>
+                    <div class="card-body text-primary">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Card with user input-->
+        <div class="row justify-content-center"> 
+            <div class="col-md-10">
+                <div class="card border-primary">
+                    <div class="card-header">Add Train</div>
+                    <div class="card-body text-primary">
+                        <form>
+                            <div class="form-group">
+                                <label for="trainNameInput">Train Name</label>
+                                <input type="text" class="form-control" id="trainNameInput" placeholder="Enter train name">
+                            </div>
+                            <div class="form-group">
+                                <label for="destinationInput">Destination</label>
+                                <input type="text" class="form-control" id="destinationInput" placeholder="Enter destination">
+                            </div>
+                            <div class="form-group">
+                                <label for="appt">First Train Time</label><br>
+                                <input type="time" id="firstTrainTime" name="appt" min="00:00" max="23:59" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appt">Frequency (min)</label><br>
+                                <input type="number" id="frequency" name="appt" min="00" max="60" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <!--Ends container-->       
+    </div>
+    
+</body>
+</html>
