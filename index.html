@@ -19,6 +19,9 @@
 
     <!--Style CSS-->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--Moment.js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
  
 </head>
 
@@ -29,7 +32,7 @@
             <div class="col-md-10">
                 <div class="jumbotron">
                     <h1 class="display-4">Any time is train time!</h1>
-                    <p class="lead">Choo choo! Chee chee!</p>
+                    <p class="lead">Welcome to MTA, the most unreliable train service - ever!</p>
                 </div>
             </div>
         </div>
@@ -50,6 +53,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                 </tbody>
                             </table>
 
@@ -66,21 +70,21 @@
                         <form>
                             <div class="form-group">
                                 <label for="trainNameInput">Train Name</label>
-                                <input type="text" class="form-control" id="trainNameInput" placeholder="Enter train name">
+                                <input type="text" class="form-control" id="trainNameInput" placeholder="Enter train name" required>
                             </div>
                             <div class="form-group">
                                 <label for="destinationInput">Destination</label>
-                                <input type="text" class="form-control" id="destinationInput" placeholder="Enter destination">
+                                <input type="text" class="form-control" id="destinationInput" placeholder="Enter destination" required>
                             </div>
                             <div class="form-group">
-                                <label for="appt">First Train Time</label><br>
-                                <input type="time" id="firstTrainTime" name="appt" min="00:00" max="23:59" required>
+                                <label for="firstTrain">First Train Time - military time hh:mm</label><br>
+                                <input type="text" id="firstTrainTime" name="firstTrain" required>
                             </div>
                             <div class="form-group">
-                                <label for="appt">Frequency (min)</label><br>
-                                <input type="number" id="frequency" name="appt" min="00" max="60" required>
+                                <label for="freq">Frequency (min)</label><br>
+                                <input type="number" id="frequencyInput" name="freq" min="00" max="60" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -90,5 +94,7 @@
      <!--Ends container-->       
     </div>
     
+    <!-- Script -->
+    <script src="./assets/javascript/scheduler.js"></script>
 </body>
 </html>

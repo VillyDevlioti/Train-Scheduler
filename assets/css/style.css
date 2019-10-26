@@ -2,9 +2,18 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url("../images/background-mta.jpg");
+    background-size: cover;
+    padding: 2% 0%;
+}
+
 .jumbotron {
     padding: 5% 15%;
     text-align: center;
+    background-color: goldenrod;
+    color: white;
+    border: 1px solid black;
 }
 
 .card-header {
