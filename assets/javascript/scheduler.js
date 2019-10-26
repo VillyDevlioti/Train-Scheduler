@@ -120,11 +120,6 @@ newRow = newRow.append("<td id=\"train-data-"+trainsCounter+"\">"+minutesAway)
 
 $("[id*='train-data-']").attr("minutes", minutesAway);
 
-if($("[id*='train-data-']").attr("minutes") <=1){
-    alert("train is approaching!");
-}
-
-
 
 },function (errorObject) { // If any errors are experienced, log them to console
   console.log("The read failed: " + errorObject.data)
